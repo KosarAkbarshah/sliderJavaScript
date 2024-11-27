@@ -1,0 +1,130 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    background: #0F2027;
+    /* fallback for old browsers */
+    background: -webkit-linear-gradient(to bottom, #0d1316, #203A43, #0F2027);
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to bottom, #2d373b, #203A43, #0F2027);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.slider {
+    width: 1000px;
+    height: 600px;
+    position: relative;
+    overflow: hidden;
+
+
+    >i {
+        display: flex;
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        cursor: pointer;
+        color: white;
+        position: absolute;
+        font-size: 40px;
+        top: 45%;
+        z-index: 999;
+
+
+        &:nth-of-type(1) {
+            right: 20px;
+        }
+
+        &:nth-of-type(2) {
+            left: 20px;
+        }
+    }
+
+    >#thumb {
+        width: 100%;
+        height: 80px;
+        position: absolute;
+        bottom: 0px;
+        left: 0;
+        /* border: 1px solid rgb(208, 16, 16); */
+        z-index: 1000;
+        display: flex;
+
+        >li {
+            padding: 5px;
+            width: 10px;
+            height: 100%;
+            flex-grow: 1;
+            cursor: pointer;
+            /* border: 2px solid black; */
+            list-style-type: none;
+
+            >img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                border-radius: 30px;
+                box-shadow: rgba(226, 234, 237, 0.411) 0px 2px 4px 0px, rgba(184, 186, 189, 0.32) 0px 2px 16px 0px;
+            }
+        }
+    }
+
+    >.bus {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        transition: 1s;
+        /* background-color: yellow; */
+        display: flex;
+
+
+
+        >figure {
+            /* width: 500px; */
+            height: 100%;
+
+
+
+            >img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                border-radius: 20px;
+
+
+            }
+        }
+    }
+
+
+}
+
+span {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    text-transform: capitalize;
+
+    >a {
+        position: absolute;
+        bottom: 100px;
+        left: 50%;
+        transform: translateX(-50%);
+        color: rgba(255, 255, 255, 0.38);
+        text-decoration: none;
+        text-transform: capitalize;
+        font-size: 20px;
+        font-weight: 600;
+    }
+}
